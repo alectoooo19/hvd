@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Love Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1528207776546-365bb710ee93') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .paper {
+            background: #fdf6e3;
+            padding: 50px;
+            width: 600px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            border: none;
+            background: transparent;
+            font-size: 20px;
+            resize: none;
+            outline: none;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #a67c52;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="paper">
+    <h1>My Love Letter</h1>
+
+    <textarea id="message" placeholder="Write your love message here..."></textarea>
+    <button onclick="showMessage()">Seal Letter 💌</button>
+
+    <div class="output" id="output"></div>
+</div>
+
+<script>
+function showMessage() {
+    var message = document.getElementById("message").value;
+    document.getElementById("output").innerText = message;
+}
+</script>
+
+</body>
+</html>
